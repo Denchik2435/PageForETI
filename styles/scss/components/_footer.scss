@@ -1,0 +1,12 @@
+@use "../base/variables" as *;
+
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 10px 0;
+  position: relative; /* Позиціонування для відносного контексту */
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}

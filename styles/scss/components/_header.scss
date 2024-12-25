@@ -1,0 +1,43 @@
+@use "../base/variables" as *;
+
+header {
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  text-align: center;
+  position: relative; /* Позиціонування для відносного контексту */
+  width: 100%;
+  z-index: 1000;
+  display: flex; /* Використання flexbox для навігації */
+  justify-content: space-between; /* Вирівнювання елементів */
+  align-items: center; /* Центрування по вертикалі */
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  display: flex; /* Використання flexbox для навігаційних елементів */
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+nav a {
+  display: block;
+  color: var(--nav-link-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--nav-link-hover-background-color);
+  color: var(--nav-link-hover-text-color);
+}
+
+.burger-items, .burger-icon {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}

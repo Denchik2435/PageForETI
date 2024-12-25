@@ -1,0 +1,14 @@
+@use "../base/variables" as *;
+
+/* Стилі для body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  display: flex; /* Використання flexbox для вертикального розміщення дочі * рніх елементів */
+  flex-direction: column; /* Вертикальне розміщення */
+  min-height: 100vh; /* Мінімальна висота для заповнення екрана */
+}

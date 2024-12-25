@@ -1,0 +1,25 @@
+@use "../base/variables" as *;
+
+@media (max-width: 950px) {
+  .header-buttons nav {
+    display: none; /* Сховати навігацію на маленьких екранах */
+  }
+
+  .burger-menu {
+    display: grid; /* Відображення бургер-меню */
+  }
+
+  .products-container {
+    display: flex; /* Використання flexbox для адаптивного відображення продуктів */
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product {
+    width: calc(50% - 10px); /* Дві колонки на маленьких екранах */
+  }
+}
+
+footer.hidden {
+  transform: translateY(100%); /* Сховати footer */
+}

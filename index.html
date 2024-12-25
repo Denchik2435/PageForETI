@@ -1,143 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Task2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Онлайн-магазин копченого та в'яленого м'яса">
+    <meta name="keywords" content="копчене м'ясо, в'ялене м'ясо, копчене сало, копчені ковбаси, копчені ребра">
+    <meta name="author" content="Янкул Денис">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Онлайн-магазин копченого та в'яленого м'яса</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="script/scripts.js" defer></script>
+    <script src="script/fetch.js" defer></script>
 </head>
-
 <body>
 
-<div>
-    <h1>
-        Що таке теорія струн?
-    </h1>
-    <h2>
-        <b>Тео́рія струн</b> — напрям теоретичної фізики, <strong>що вивчає динаміку взаємодії не точкових частинок
-        а одновимірних протяжних об'єктів</strong>, так званих квантових струн. Теорія струн поєднує в собі
-        ідеї квантової механіки і теорії відносності, тому на її основі, можливо, буде побудована
-        майбутня теорія квантової гравітації.
-    </h2>
-    <h2>
-        Теорія струн ґрунтується на гіпотезі, що усі елементарні частинки та їхні фундаментальні
-        взаємодії виникають в результаті коливань і взаємодій ультрамікроскопічних квантових струн
-        на масштабах порядку довжини Планка 10−35 м. Цей підхід, з одного боку, дозволяє уникнути
-        таких труднощів квантової теорії поля, як перенормування, а з іншого дає змогу для глибшого
-        погляду на структуру матерії і простору-часу. Квантова теорія струн виникла на початку 1970-х
-        років в результаті осмислення формул Ґабріеле Венеціано, пов'язаних зі струнними моделями будови
-        адронів. Середина 1980-х і середина 1990-х ознаменувалися бурхливим розвитком теорії струн;
-        очікувалося, що найближчим часом на основі теорії струн буде сформульована так звана «єдина
-        теорія» або «теорія всього», пошукам якої Ейнштейн безуспішно присвятив десятиліття.
-        Але попри математичну строгість і цілісність теорії, поки не знайдені варіанти експериментального
-        підтвердження теорії струн. Теорія, що виникла для опису адронної фізики, але не цілком
-        підійшла для цього, опинилася у свого роду експериментальному вакуумі опису всіх взаємодій.
-    </h2>
-    <img src="1.png" alt="photo">
-</div>
-<div>
-    <h1>Таблиця прикладів</h1>
-    <table>
-        <thead>
-        <tr>
-            <th>Теорії струн</th>
-            <th>Тип</th>
-            <th>Кількість вимірів простору-часу</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Бозонна</td>
-            <td>26</td>
-            <td>Описує тільки бозони, немає ферміонів; струни як відкриті, так і замкнуті; основний недолік: наявність частинки з уявною масою, що рухається зі швидкістю, більшою за швидкість світла, — тахіона</td>
-        </tr>
-        <tr>
-            <td>I</td>
-            <td>10</td>
-            <td>Включає суперсиметрію; струни як відкриті, так і замкнуті; відсутній тахіон; групова симетрія — SO (32)</td>
-        </tr>
-        <tr>
-            <td>IIA</td>
-            <td>10</td>
-            <td>Включає суперсиметрію; струни тільки замкнуті; відсутній тахіон; безмасові ферміони нехіральні</td>
-        </tr>
-        <tr>
-            <td>IIB</td>
-            <td>10</td>
-            <td>Включає суперсиметрію; струни тільки замкнуті; відсутній тахіон; безмасові ферміони хіральні</td>
-        </tr>
-        <tr>
-            <td>HO</td>
-            <td>10</td>
-            <td>Включає суперсиметрію; струни тільки замкнуті; відсутній тахіон; теорія гетеротична: струни, які коливаються за годинниковою стрілкою, відрізняються від струн, що коливаються проти; групова симетрія — SO (32)	</td>
-        </tr>
-        <tr>
-            <td>HE</td>
-            <td>10</td>
-            <td>Включає суперсиметрію; струни тільки замкнуті; відсутній тахіон; теорія гетеротична: струни, що коливаються за годинниковою стрілкою, відрізняються від струн, що коливаються проти; групова симетрія — E8×E8
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+<header>
+    <h1>Онлайн-магазин копченого та в'яленого м'яса</h1>
+    <div class="header-buttons">
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="products.html">Продукти</a>
+            <a href="contact.html">Контакти</a>
+            <a href="login.html">Увійти</a>
+        </nav>
+        <div class="burger-menu">
+            <input type="checkbox" id="burger-checkbox">
+            <label for="burger-checkbox" class="burger-icon">&#9776;</label>
+            <div class="burger-items">
+                <a href="index.html">Головна</a>
+                <a href="products.html">Продукти</a>
+                <a href="contact.html">Контакти</a>
+                <a href="login.html">Увійти</a>
+            </div>
+        </div>
+    </div>
+</header>
 
-<div>
-    <h1>Жалюгідні копії: </h1>
-    <ul>
-        <li><a href="https://uk.wikipedia.org/wiki/Теорія_струн" target="_blank">Теорія струн - Вікіпедія</a></li>
-        <li><a href="https://ru.wikipedia.org/wiki/Теория_струн" target="_blank">Теория струн - Википедия</a></li>
-    </ul>
+<main>
+    <div class="banner-image">
+        <img src="img/all1.jpeg" alt="Коппа" width="100%">
+    </div>
+    <div class="container">
+        <section id="home">
+            <h2>Ласкаво просимо!</h2>
+            <p>Ми з радістю вітаємо вас у нашому онлайн-магазині копченого та в'яленого м'яса.</p>
+        </section>
+
+        <section id="products">
+            <h2>Наші продукти:</h2>
+            <div class="products-container">
+                <article class="product">
+                    <figure>
+                        <img src="img/koppa.jpg" alt="Коппа" width="900" height="600">
+                        <figcaption>
+                            <h3>Коппа</h3>
+                            <p>В'ялена свиняча шинка</p>
+                            <p>Ціна: 690 грн/кг</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="product">
+                    <figure>
+                        <img src="img/basturma.jpg" alt="Бастурма" width="900" height="600">
+                        <figcaption>
+                            <h3>Бастурма</h3>
+                            <p>В'ялена вирізка із різних видів м'яса</p>
+                            <p>Ціна: 500 грн/кг</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="product">
+                    <figure>
+                        <img src="img/chorizo.jpg" alt="Чорізо" width="900" height="600">
+                        <figcaption>
+                            <h3>Чорізо</h3>
+                            <p>В'ялена ковбаска зі свинини</p>
+                            <p>Ціна: 350 грн/кг</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="product">
+                    <figure>
+                        <img src="img/sudzhuk.jpg" alt="Суджук" width="900" height="600">
+                        <figcaption>
+                            <h3>Суджук</h3>
+                            <p>В'ялене м'ясо зі свинини та яловичини</p>
+                            <p >Ціна: 600 грн/кг</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="product">
+                    <figure>
+                        <img src="img/pancheta.jpg" alt="Панчета" width="900" height="600">
+                        <figcaption>
+                            <h3>Панчета</h3>
+                            <p>В'ялене бекорон</p>
+                            <p>Ціна: 400 грн/кг</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="product">
+                    <figure>
+                        <img src="img/grudka.jpg" alt="Курина грудка" width="800" height="600">
+                        <figcaption>
+                            <h3>Курина грудка</h3>
+                            <p>Копчена курина грудка</p>
+                            <p>Ціна: 300 грн/кг</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="product">
+                    <figure>
+                        <img src="img/rebra.jpg" alt="Ребра" width="900" height="600">
+                        <figcaption>
+                            <h3>Ребра</h3>
+                            <p>Копчені свинячі ребра</p>
+                            <p>Ціна: 550 грн/кг</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="product">
+                    <figure>
+                        <img src="img/salo.jpg" alt="Сало" width="900" height="600">
+                        <figcaption>
+                            <h3>Сало</h3>
+                            <p>Копчене свиняче сало</p>
+                            <p>Ціна: 700 грн/кг</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="product">
+                    <figure>
+                        <img src="img/krultsa.jpg" alt="Крильця" width="900" height="600">
+                        <figcaption>
+                            <h3>Крильця</h3>
+                            <p>Копчені курині крильця</p>
+                            <p>Ціна: 480 грн/кг</p>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+
+        <section class="ip-section">
+            <h2>Ваша IP-адреса</h2>
+            <p id="ip-display">Завантаження IP-адреси...</p>
+        </section>
+
+        <section id="contact">
+            <h2>Контакти</h2>
+            <p>Контактна інформація для зв'язку.</p>
+        </section>
+
+        <section id="about">
+            <h2>Про нас</h2>
+            <p>Інформація про компанію.</p>
+        </section>
+    </div>
+</main>
+
+<button id="toggle-panel">Приховати панель стилів</button>
+
+<div id="style-panel">
+    <h3>Панель стилів</h3>
+    <div id="controls">
+        <h4>Зміна кольору тексту</h4>
+        <button id="color-red">Червоний</button>
+        <button id="color-blue">Синій</button>
+        <button id="color-green">Зелений</button>
+
+        <h4>Зміна розміру шрифту</h4>
+        <select id="font-size-select">
+            <option value="12">12px</option>
+            <option value="16">16px</option>
+            <option value="20">20px</option>
+        </select>
+
+        <h4>Зміна ширини блочного елемента</h4>
+        <input type="range" id="width-range" min="100" max="800" value="300">
+        <button id="set-width">Змінити ширину</button>
+
+        <h4>Зміна кольору фону</h4>
+        <button id="bg-color-red">Червоний</button>
+        <button id="bg-color-blue">Синій</button>
+        <button id="bg-color-green">Зелений</button>
+    </div>
 </div>
-
-<div>
-    <h1>Назви тегів HTML, які ви використали на сторінці</h1>
-
-    <table>
-        <thead>
-        <tr>
-            <th>Теги</th>
-            <th>Описання</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>title</td>
-            <td>Задає назву документа, що відображається у заголовку вікна браузера.</td>
-        </tr>
-        <tr>
-            <td>img</td>
-            <td>Вставляє зображення</td>
-        </tr>
-        <tr>
-            <td>від h1 до h6</td>
-            <td>Заголовки різного рівня</td>
-        </tr>
-        <tr>
-            <td>ul</td>
-            <td>Невпорядкований список</td>
-        </tr>
-        <tr>
-            <td>li</td>
-            <td>Елемент списку</td>
-        </tr>
-        <tr>
-            <td>table</td>
-            <td>Створює таблицю</td>
-        </tr>
-        <tr>
-            <td>tr</td>
-            <td>Створює рядок таблиці</td>
-        </tr>
-        <tr>
-            <td>th</td>
-            <td>Створює заголовок таблиці</td>
-        </tr>
-        <tr>
-            <td>td</td>
-            <td>Створює комірку таблиці</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
+<footer id="page-footer">
+    <p>&copy; 2024 Онлайн-магазин копченого та в'яленого м'яса</p>
+</footer>
 </body>
 </html>

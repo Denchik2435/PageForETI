@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Онлайн-магазин копченого та в'яленого м'яса">
+    <meta name="keywords" content="копчене м'ясо, в'ялене м'ясо, копчене сало, копчені ковбаси, копчені ребра">
+    <meta name="author" content="Янкул Денис">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Онлайн-магазин копченого та в'яленого м'яса</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="script/scripts.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Онлайн-магазин копченого та в'яленого м'яса</h1>
+    <div class="header-buttons">
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="products.html">Продукти</a>
+            <a href="contact.html">Контакти</a>
+            <a href="login.html">Увійти</a>
+        </nav>
+        <div class="burger-menu">
+            <input type="checkbox" id="burger-checkbox">
+            <label for="burger-checkbox" class="burger-icon">&#9776;</label>
+            <div class="burger-items">
+                <a href="index.html">Головна</a>
+                <a href="products.html">Продукти</a>
+                <a href="contact.html">Контакти</a>
+                <a href="login.html">Увійти</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h2>Наші продукти</h2>
+        <div class="products-container">
+            <article class="product">
+                <figure>
+                    <img src="img/koppa.jpg" alt="Коппа" width="300" height="200">
+                    <figcaption>
+                        <h3>Коппа</h3>
+                        <p>В'ялена свиняча шинка</p>
+                        <p>Ціна: 690 грн/кг</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="product">
+                <figure>
+                    <img src="img/basturma.jpg" alt="Бастурма" width="300" height="200">
+                    <figcaption>
+                        <h3>Бастурма</h3>
+                        <p>В'ялена вирізка із різних видів м'яса</p>
+                        <p>Ціна: 500 грн/кг</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="product">
+                <figure>
+                    <img src="img/chorizo.jpg" alt="Чорізо" width="300" height="200">
+                    <figcaption>
+                        <h3>Чорізо</h3>
+                        <p>В'ялена ковбаска зі свинини</p>
+                        <p>Ціна: 350 грн/кг</p>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Онлайн-магазин копченого та в'яленого м'яса</p>
+</footer>
+
+</body>
+</html>
